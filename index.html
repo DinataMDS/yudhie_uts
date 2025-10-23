@@ -23,7 +23,7 @@
             <a-asset-item id="smallseater" src="./small_seater_only.glb"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro">
-            <a-entity id="rotator-parent" position="0 0 0" animation="property: rotation; from:0 0 0; to: 0 0 360; loop: true; dur: 10000; easing: linear; startEvents: start-rotation;">
+            
             <a-gltf-model
                 src="#smallseater"
                 position="0 0.2 0"
@@ -31,20 +31,12 @@
                 rotation="-90 0 0"
                 >
             </a-gltf-model>
-            </a-entity>
+            
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
     
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const animateButton = document.getElementById('animate-button');
-        const rotatorParent = document.getElementById('rotator-parent');
-
-        animateButton.addEventListener('click', () => {
-          rotatorParent.emit('start-rotation');
-        });
-      });
-    </script>
+    
 </body>
+
 </html>
